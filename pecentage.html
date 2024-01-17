@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+ <label for="">English</label>
+ <input type="text" id="english" ><br>
+ <label for="">Urdu</label>
+ <input type="text" id="urdu" ><br>
+ <label for="">Math</label>
+ <input type="text" id="math" ><br>
+ <label for="">Science</label>
+ <input type="text" id="science" ><br>
+ <label for="">SST</label>
+ <input type="text" id="sst" ><br>
+ <div id="obtain"></div><br><br>
+ <div id="percentage"></div><br><br>
+</form>
+ <button onclick="myfun()">submit</button>
+
+    
+</body>
+<script>
+ function myfun(){
+  let english =parseInt( document. getElementById("english").value);
+  let urdu =parseInt( document.getElementById ("urdu").value);
+  let math =parseInt( document.getElementById ("math").value);
+  let science =parseInt( document.getElementById("science").value);
+  let sst =parseInt( document.getElementById("sst").value);
+  let obtain = english+urdu+math+science+sst;
+  let total =500;
+  let percentage = obtain/total*100;
+  let para = document.getElementById("obtain").innerHTML="Your Obtain Marks is "+obtain;
+  let para2 = document.getElementById("percentage").innerHTML="Your Percentage is "+percentage+"%";
+  if(percentage>=40){
+    document.getElementById("percentage").style.color="green";
+  }
+  else{
+    document.getElementById("percentage").style.color="red";
+  }
+
+ }
+
+</script>
+</html>
